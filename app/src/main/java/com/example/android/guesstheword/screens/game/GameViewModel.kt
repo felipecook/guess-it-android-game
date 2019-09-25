@@ -32,12 +32,10 @@ class GameViewModel : ViewModel() {
     private fun nextWord() {
         //Select and remove a word from the list
         if (wordList.isEmpty()) {
-            gameFinished()
+            //gameFinished()
         } else {
             word = wordList.removeAt(0)
         }
-        updateWordText()
-        updateScoreText()
     }
 
     /** Methods for buttons presses **/
