@@ -19,6 +19,8 @@ class GameViewModel : ViewModel() {
         Log.i("GameViewModel", "GameViewModel created")
         resetList()
         nextWord()
+        score.value = 0
+
     }
 
     override fun onCleared() {
@@ -42,12 +44,12 @@ class GameViewModel : ViewModel() {
     /** Methods for buttons presses **/
 
     fun onSkip() {
-        score--
+        score.value = (score.value)?.minus(1)
         nextWord()
     }
 
     fun onCorrect() {
-        score++
+        score.value = (score.value)?.plus(1)
         nextWord()
     }
 
